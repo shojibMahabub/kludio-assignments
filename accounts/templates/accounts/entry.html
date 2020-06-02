@@ -1,0 +1,23 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+<form method="POST" action="{% url 'entry' %}">
+{% csrf_token %}    
+    <label for="">Name</label><br>
+    <div class="input-group mb-3">
+    {{form.name}}
+    </div>
+
+    <label for="">Phone</label><br>
+    <div class="input-group mb-2">
+        {{form.phone}}
+    </div>
+
+    <label for="">Email</label><br>
+    <div class="input-group mb-2">
+    <input type="email" name="email" >
+    </div>
+    {{form.errors}}
+    <input class="btn login_btn" type="submit" value="save">
+</form> 
+{% endblock content %}

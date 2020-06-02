@@ -1,0 +1,9 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+    <div class="container" style="margin: 50px;">
+        <p>Your entry was collected successfully</p>
+        <p>Want to see them? Please<a href="{% url 'login' %}" class="ml-2">Login</a></p>
+    </div>
+    
+{% endblock content %}

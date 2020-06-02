@@ -1,0 +1,13 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+<a class="btn" href="{%url 'logout'%}" style="margin: 10px;">Exit</a>
+
+{% for c in customer %}
+<ul class="list-group" style="margin-bottom: 15px;">
+    <li class="list-group-item">{{c.name}}</li>
+    <li class="list-group-item">{{c.phone}}</li>
+    <li class="list-group-item">{{c.email}}</li>
+</ul>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+<form method="POST" action="">
+	{% csrf_token %}
+	<label for="">Username</label><br>
+	<div class="input-group mb-3">
+		{{form.username}}
+	</div>
+	<label for="">Email</label><br>
+	<div class="input-group mb-2">
+		{{form.email}}
+	</div>
+	<label for="">Password</label><br>
+	<div class="input-group mb-2">
+		{{form.password1}}
+	</div>
+	<label for="">Re-type password</label><br>
+	<div class="input-group mb-2">
+		{{form.password2}}
+	</div>
+	<input class="btn login_btn" type="submit" value="Register Account">
+
+
+</form>
+
+{{form.errors}}
+Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
+
+{% endblock content %}
